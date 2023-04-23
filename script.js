@@ -29,7 +29,11 @@ const handleOnMove = e => {
     globalIndex++;
   }
 }
+document.body.addEventListener('touchmove', function(event) {
+  event.preventDefault();
+}, { passive: false });
 
 window.onmousemove = e => handleOnMove(e);
 
 window.ontouchmove = e => handleOnMove(e.touches[0]);
+
