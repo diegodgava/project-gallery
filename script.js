@@ -18,7 +18,7 @@ const distanceFromLast = (x, y) => {
 }
 
 const handleOnMove = e => {
-  if(distanceFromLast(e.clientX, e.clientY) > (window.innerWidth / 30)) {
+  if(distanceFromLast(e.clientX, e.clientY) > (window.innerWidth / 25)) {
     const lead = images[globalIndex % images.length],
           tail = images[(globalIndex - 5) % images.length];
 
@@ -37,3 +37,21 @@ window.onmousemove = e => handleOnMove(e);
 
 window.ontouchmove = e => handleOnMove(e.touches[0]);
 
+const darkmode = document.getElementById('darkmode')
+
+let isDarkMode = false;
+
+darkmode.addEventListener('click', () => {
+  if (isDarkMode) {
+    document.body.style.backgroundColor = 'white';
+    document.getElementById('menu').style.backgroundColor = 'white';
+    document.getElementById('menu').style.color = 'black';
+    isDarkMode = false; 
+  }
+  else {
+    document.body.style.backgroundColor = 'black';
+    document.getElementById('menu').style.backgroundColor = 'black';
+    document.getElementById('menu').style.color = 'white';
+    isDarkMode = true; 
+  }
+});
