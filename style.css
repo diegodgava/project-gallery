@@ -3,6 +3,12 @@ body {
     height: 100vh;
     margin: 0px;
     overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
   }
   
   .image {
@@ -24,7 +30,7 @@ body {
   display: flex;
   justify-content: center;
   left: 50%;
-  top: 96%;
+  top: 95%;
   transform: translate(-50%);
   z-index: 100000;
   background-color: white;

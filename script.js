@@ -29,14 +29,6 @@ const handleOnMove = e => {
     globalIndex++;
   }
 }
-document.body.addEventListener('touchmove', function(event) {
-  event.preventDefault();
-}, { passive: false });
-
-window.onmousemove = e => handleOnMove(e);
-
-window.ontouchmove = e => handleOnMove(e.touches[0]);
-
 const darkmode = document.getElementById('darkmode')
 
 let isDarkMode = false;
@@ -55,3 +47,11 @@ darkmode.addEventListener('click', () => {
     isDarkMode = true; 
   }
 });
+document.body.addEventListener('touchmove', function(event) {
+  event.preventDefault();
+}, { passive: false });
+
+window.onmousemove = e => handleOnMove(e);
+
+window.ontouchmove = e => handleOnMove(e.touches[0]);
+
