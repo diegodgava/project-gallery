@@ -7,17 +7,22 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style-responsivo.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
         <div id="menu">
-            <div id="plus">
-            <span class="material-symbols-outlined">add_circle</span>
-            </div>
             <div id="darkmode">
-            <span class="material-symbols-outlined">dark_mode</span>   
+            <span class="material-symbols-outlined animate__animated" id="moon">dark_mode</span>   
+            <span class="material-symbols-outlined animate__animated" id="sun">brightness_5</span>
              </div> 
+             <span class="material-symbols-outlined" id="speed">fast_forward</span>
+             <input type="range" id="slider" min="5" max="55" value="25">
         </div>
 
 
@@ -69,6 +74,7 @@
 
     <img class="image" data-index="0" data-status="inactive" src="imagens/img-41.jpg" />
     <img class="image" data-index="0" data-status="inactive" src="imagens/img-42.jpg" />
+    <img class="image" data-index="0" data-status="inactive" src="imagens/img-43.jpg" />
 
 
 
