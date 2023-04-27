@@ -1,4 +1,4 @@
-body {
+#background {
     background-color: rgb(255, 255, 255);
     height: 100vh;
     margin: 0px;
@@ -23,6 +23,11 @@ body {
   
   .image[data-status="active"] {
     display: block;
+  }
+
+  
+  .opaque {
+    background-color: rgba(0, 0, 0, 0.5);
   }
 
 #menu {
@@ -86,9 +91,11 @@ transform: translate(-50%, -50%);
 #speed {
   margin-left: 15px;
   margin-bottom: 4px;
+  display: none;
 }
 #slider {
   margin-bottom: 5px;
+  display: none;
   
 }
 
@@ -101,3 +108,47 @@ transform: translate(-50%, -50%);
   margin-bottom: 4px;
 }
 
+ .active {
+  width: 60vmin;
+  z-index: 999;
+  animation: move-to-center 0.5s ease-out forwards;
+}
+
+.opaque {
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0.5;
+}
+
+@keyframes move-to-center {
+  0% {
+    transform: scale(1.5);
+    z-index: 999;
+  }
+  100% {
+    transform: scale(4);
+    z-index: 999;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+} 
+
+/* #modal-container{
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 1500;
+  width: 100%;
+  height: 100%;
+  }
+
+  #modal {
+    display: flex;
+    position: fixed;
+    z-index: 999;
+    box-shadow: 0 4px 23px 0 rgba(0,0,0,.2);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    } */
